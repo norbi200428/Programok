@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1633161174 source:c:\users\norby\dropbox\code blocks\s1-lab5-1\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+
