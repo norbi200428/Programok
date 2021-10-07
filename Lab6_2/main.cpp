@@ -36,6 +36,8 @@ int main()
         }
         out << endl;
     }
+    in.close();
+    out.close();
 
     return 0;
 }
