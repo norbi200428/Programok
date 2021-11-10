@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1636562426 source:d:\programok\string transform\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+
