@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1637689605 source:d:\programok\lab11_1\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+
