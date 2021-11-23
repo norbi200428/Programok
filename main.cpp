@@ -1,47 +1,46 @@
 #include <iostream>
-
+#include <ctime>
+#include <stdlib.h>
 using namespace std;
+int tomb(int arr[],int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout <<endl;
+}
+int selectSort(int arr[],int n)
+{
+    int i,j;
+    for(i=0; i<n-1; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+            if(arr[i]>arr[j])
+            {
+
+                swap(arr[i],arr[j]);
+            }
+        }
+    }
+
+}
 
 int main()
 {
-
-    int v[100][100],n,m;
+    srand(time(0));
+    int arr[100],n ;
     cout << "n=";
     cin >> n;
-    cout << "m=";
-    cin >> m;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            cin >> v[i][j];
-        }
+    for(int i=0; i<n; i++)
+    {
+        arr[i]=rand()%100;
     }
-    int us=n-1,uo=m-1;
-    int s=0,o=0;
-    while(s<=n && o<=m){
-        for(int i=o ; i<=uo ;i++){
-            cout << v[s][i] << " ";
-        }
-        s++;
-        for(int i=s;i<=us;i++){
-            cout << v[i][uo] << " ";
-        }
-
-        uo--;
-        if(s<=us){
-        for(int i=uo;i>=o;i--){
-            cout << v[us][i] << " ";
-        }
-        }
-        us--;
-        if(o<=uo){
-        for(int i=us;i>=s;i--){
-            cout << v[i][o] << " ";
-
-        }
-        }
-        o++;
-
-    }
+    tomb(arr,n);
+    selectSort(arr, n);
+    tomb(arr, n);
 
 
     return 0;
