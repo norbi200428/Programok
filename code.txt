@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+bool prim(int a){
+  for(int i=2;i<a/2+1;i++){
+    if(a%i==0){
+     return false;
+    }
+  }
+     return true;
+}
+int primek(int n, int &x , int &y){
+    int p=0;
+    while(p!=1){
+        int z=n-1;
+        int b=prim(z);
+        if(b==1){
+            y=z;
+            p=1;
+        }
+        n--;
+    }
+    int q=0;
+    int aux=y;
+    while(q!=1){
+        int r=aux-1;
+        int a=prim(r);
+        if(a==1){
+            x=r;
+            q=1;
+        }
+        aux--;
+    }
+}
+
+int main()
+{
+    int n,x=0,y=0;
+    cout << "add meg a n-t";
+    cin >> n;
+     primek(n,x,y);
+     cout << x << endl;
+     cout << y;
+    return 0;
+}
